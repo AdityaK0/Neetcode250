@@ -21,6 +21,9 @@ def isAnagram(s: str, t: str):
     # s_hash_map = {}
     # best way is can be like this
     
+    
+    # instead of 2 times iterate we can have at one iteration both map construction
+    
     # for ch in s:
     #     s_hash_map[ch] = s_hash_map.get(ch,0)+1
     
