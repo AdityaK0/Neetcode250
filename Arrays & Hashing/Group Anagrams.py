@@ -1,6 +1,7 @@
 from collections import defaultdict
 import re
 
+# TC — O(n * k log k) SC — O(n * k) 
 
 def groupAnagrams(strs):
     if len(strs) == 1:

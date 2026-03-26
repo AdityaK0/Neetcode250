@@ -10,5 +10,12 @@
 -rw-r--r--@ 1 upforcetech  staff  2226 Mar 26 00:32 Group Anagrams.py
 
 
+(30/4/2026)
+
+-rw-r--r--@ 1 upforcetech  staff  1470 Mar 26 23:29 Remove Element.py
+-rw-r--r--@ 1 upforcetech  staff   702 Mar 27 00:29 Majority Element.py
+
+
+
 will create a tommorow.md and then on the next day if revision is done then will convert the 
 file name to today.md

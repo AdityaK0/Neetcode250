@@ -46,25 +46,28 @@ def longestCommonPrefix(strs):
     
     
     # own way  ---------------- 0(n*m) Sc-0(1)
-
+    
     # fstr = strs[0]
-    # miny = float("inf")
+    # mini = float("inf")
+    
+    
     
     # for i in range(1,len(strs)):
     #     cstr = strs[i]
     #     k = 0
     #     ctn = 0
-    #     while k<len(cstr) and k<len(fstr):
-    #         if cstr[k] == fstr[k]:
+    #     while k<len(fstr) and k<len(cstr):
+    #         if fstr[k] == cstr[k]:
+    #             k+=1
     #             ctn+=1
     #         else:
-    #             miny = min(k,miny) if miny != float("inf") else k
-    #             break  
-    #         k+=1
-            
-    #     miny = min(miny,ctn) 
-      
-    # return fstr[0:miny]
+    #             mini = min(k,mini)
+    #             break 
+        
+    #     mini = min(ctn,mini)    
+    
+    # return fstr[0:mini]        
+
 
 print(longestCommonPrefix(["bat","bag","bank","band"]))
 print(longestCommonPrefix(["dance","dag","danger","damage"]))
