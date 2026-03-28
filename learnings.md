@@ -11,3 +11,17 @@ Order of original array doesn't matter
 
 When range is fixed with small range then we can use array as hash and update its index but if range is not fixed of 
 element then better approch is to use us hashmap
+
+
+
+[[]]*1000                    = both are different first create the reference to the same object 
+[ [] for _ in range(1000)]   =  second one creates separate reference
+
+Why this happens
+[[]] * 1000
+Creates list once: []
+Copies reference 1000 times
+
+[[] for _ in range(1000)]
+Runs loop 1000 times
+Creates new list each time
