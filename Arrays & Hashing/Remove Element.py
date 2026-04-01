@@ -55,3 +55,46 @@ print(removeElement([2,1],2))
 print(removeElement([4,5,6,7,8],9))
 
 # basically need to update the place where 1 is available from its next very element 
+
+
+
+
+### Solution 1 (Two Pointer / In-place Filtering)
+
+# TC - O(n)
+# SC - O(1)
+
+# Why
+# Single pass through array. Each element checked once. Swap/write valid elements to front using pointer `k`. No extra space used.
+
+# Algorithm
+# Two Pointer (Fast & Slow)
+
+# ---
+
+# ### Note (important)
+
+# * Order is **not guaranteed** because of swapping:
+
+# ```python
+# nums[k], nums[i] = nums[i], nums[k]
+# ```
+
+# If order matters, use:
+
+# ```python
+# nums[k] = nums[i]
+# ```
+
+# ---
+
+# ### Solution 2 (Stable version – maintain order)
+
+# TC - O(n)
+# SC - O(1)
+
+# Why
+# Same traversal, but instead of swapping, overwrite positions. Keeps relative order of elements.
+
+# Algorithm
+# Two Pointer (Stable Write)

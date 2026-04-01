@@ -23,7 +23,7 @@ def longestCommonPrefix(strs):
         prefix = prefix[:j]
         
         if not prefix: # nothing matched then empty string 
-            ""
+            return ""
     
     return prefix        
 
@@ -77,3 +77,46 @@ print(longestCommonPrefix(["interview","internet","internal","interval"]
 ))
 
 
+
+# ### Solution 1 (Prefix Shrinking)
+
+# TC - O(n * m)
+# SC - O(1)
+
+# Why
+# Compare each string with current prefix. In worst case, each comparison checks up to m characters. No extra space used.
+
+# ---
+
+# ### Solution 2 (Build string with ans)
+
+# TC - O(n * m²)
+# SC - O(m)
+
+# Why
+# Same comparisons as above, but string concatenation (`ans += char`) is O(m) each time → makes it quadratic.
+
+# ---
+
+# ### Solution 3 (Min tracking approach)
+
+# TC - O(n * m)
+# SC - O(1)
+
+# Why
+# Tracks minimum matching length across strings. Works, but logic is more complex than needed.
+
+# ---
+
+# ### Solution 4 (Vertical Scanning)
+
+# TC - O(n * m)
+# SC - O(1)
+
+# Why
+# Check column-wise (character by character across all strings). Stops early on mismatch. Same complexity, cleaner logic.
+
+# ---
+
+# If algorithm reference needed:
+# All above are variations of **string comparison / scanning**, no special algorithm like DP or binary search involved.

@@ -1,8 +1,8 @@
 
 
-# boyere moooremsays that reset the current value once it reaches 0 with the current iteratin element 
+# Boyer–Moore Voting Algorithm says that reset the current value once it reaches 0 with the current iteratin element 
 
-# remember the name boyer moore
+# remember the name Boyer–Moore Voting Algorithm
 def majorityElement(nums):
     res = nums[0]
     ctn = 1
@@ -28,3 +28,25 @@ def majorityElement(nums):
 
 
 print(majorityElement([5,5,1,1,1,5,5]))
+
+
+
+
+# Solution 1 (Boyer–Moore Voting Algorithm)
+
+# TC - O(n)
+# SC - O(1)
+
+# Why
+# Single pass through array. Count increases/decreases to cancel out non-majority elements. Majority element remains at the end. No extra space used.
+
+# Algorithm
+# Boyer–Moore Voting Algorithm
+
+# Solution 2 (Hash Map / Counting)
+
+# TC - O(n)
+# SC - O(n)
+
+# Why
+# Traverse array and store frequency of each element in dictionary. Majority element will have count > n/2. Extra space used for storing counts.

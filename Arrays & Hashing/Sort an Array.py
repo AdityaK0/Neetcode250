@@ -1,17 +1,21 @@
 
-from re import L
 
 
-def merge(nums1,nums2):
-    pass
+# will do this in sorting all together things 
+
+def merge(nums,left,right,mid):
+    while left>=right:
+        return
 
 
 def divide(nums,left,right):
-    if not left<=right:
+    if left>=right:
         return nums
     mid = (left+right)//2
     
-    return divide(nums,left,mid)+divide(nums,mid+1,right)    
+    divide(nums,left,mid)
+    divide(nums,mid+1,right)    
+    merge(nums,left,right,mid)
     
 
 
