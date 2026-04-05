@@ -10,6 +10,8 @@ def longestCommonPrefix(strs):
 
 
 
-sliding window pattern :
-   Longest Subarray with given Sum K(Positives)
-   
+longestSubarray using hashmap and prefix sum 
+isValid Skudo Optimal solution 
+Prefix Suffix Playlist 
+
+
