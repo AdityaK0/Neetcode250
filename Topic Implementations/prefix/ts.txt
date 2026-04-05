@@ -1,0 +1,1 @@
+array sum is always equals to suffix[i]+prefix[i]+ans[i]

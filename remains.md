@@ -7,3 +7,9 @@ def longestCommonPrefix(strs):
                 return strs[0][:i]
 
     return strs[0].   #cant proceed
+
+
+
+sliding window pattern :
+   Longest Subarray with given Sum K(Positives)
+   
