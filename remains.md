@@ -10,7 +10,9 @@ def longestCommonPrefix(strs):
 
 
 
-longestSubarray using hashmap and prefix sum 
+
+longestSubarray using hashmap and prefix sum  - done
+https://www.geeksforgeeks.org/problems/maximum-sub-array5443/1
 isValid Skudo Optimal solution 
 Prefix Suffix Playlist 
 
