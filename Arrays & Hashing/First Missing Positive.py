@@ -1,5 +1,23 @@
 def firstMissingPositive(nums):
     
+    
+    # another solution which i saw mostly used on leetcode was place nums[i] at its correct place
+    # then iterate and find the it is index based + 1 sorted or not if not then its the ans 
+    #Cyclic Sort / Index Placement
+    
+    #“If a number x exists, put it at index x-1.”
+    n = len(nums)
+    for i in range(len(nums)):
+        while 1<=nums[i]<=n and nums[i] != nums[nums[i]-1]:
+            correct_index = nums[i]-1
+            nums[correct_index],nums[i] = nums[i],nums[correct_index]
+    
+    for i in range(len(nums)):
+        if nums[i] != i+1:
+            return i+1
+    
+    return n+1    
+                    
     # Algorithm
     # Index marking / cyclic presence tracking
     
@@ -16,7 +34,7 @@ def firstMissingPositive(nums):
     if not is_1_present:
         return 1 # as we are marking non eligible element as one so it is also need to find that even 1 also exists or not
     
-    # 2 : negation implementation
+    # implement negation on each element to mark their presence 
     
     # for i in range(len(nums)):
     #     num = abs(nums[i]) # if the value is already negative then how we are suppose to find it index 
