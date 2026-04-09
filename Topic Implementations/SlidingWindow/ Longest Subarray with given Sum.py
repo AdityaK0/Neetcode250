@@ -8,15 +8,15 @@ def longestSubarray(nums,k):
     
     prefix_map = {}
     
-    prefix_map[0] = 1
+    prefix_map[0] = -1 # prefix trick always add this 
     curr_sum = 0
     max_length = 0
     
     for i in range(len(nums)):
         curr_sum+=nums[i]
         
-        if curr_sum == k:
-            max_length = i+1
+        # if curr_sum == k: not needed
+        #     max_length = i+1
         
         if curr_sum - k in prefix_map:
             max_length = max(max_length,i-prefix_map[curr_sum-k])
@@ -82,7 +82,7 @@ def longestSubarray(nums,k):
     
     # return max_length            
 
-nums = [10, 5, 2, 7, 1, -10]
+nums = [10, 5, 2, 7, 1]
 k = 15
 
 print(longestSubarray(nums,k))
