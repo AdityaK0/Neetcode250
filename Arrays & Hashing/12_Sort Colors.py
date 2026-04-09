@@ -34,7 +34,7 @@ def sortColors(nums):
     left = 0
     right = len(nums)-1
     i = 0
-    while i<=right: # why this is her not len(nums) because len(nums) will go for all which we dont want what if some that 
+    while i<=right: # why this is not len(nums) because len(nums) will go for all elements  which we dont want what if some of that 
                     # part is already sorted so will go till right only 
         
         if nums[i] == 0:

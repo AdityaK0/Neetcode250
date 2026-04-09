@@ -12,32 +12,26 @@ def removeElement(nums,val):
     return nums,k        
             
                   
+    i = 0 
+    j = 0
+    if not nums:
+        return i
     
-    # if not nums : # maintains order and push back the element too
-                    # or len(nums)==1 removed this part from here cause even if i came but it does not equals to then it 
-                    # will be counted as that yes it does not equals to that  
-    #     return i
+    while nums[i]!=val:
+        i+=1
     
-    # while i<len(nums) and nums[i]!=val:
-    #     i+=1
+    if i>=len(nums)-1:
+        return i
+    else:
+        j = i+1
     
-    # if not i<len(nums) or i == len(nums)-1:
-    #     return i
+    while j<len(nums):
+        if nums[j]!=val:
+            nums[j],nums[i] = nums[i],nums[j]
+            i+=1
+        j+=1
     
-    # j = 0
-    # if i<len(nums)-1:
-    #     j = i+1
-        
-    # while j<len(nums):
-    #     if nums[j] != val:
-    #         nums[i],nums[j] = nums[j],nums[i]
-    #         i+=1
-    #         j+=1
-        
-    #     else:
-    #         j+=1
-    # return nums          
-               
+    return i                 
         
     
           

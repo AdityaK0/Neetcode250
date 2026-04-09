@@ -7,7 +7,12 @@ def topKFrequent(nums,k):
     
     # using bucket_sort 
     
-    # bucket = [ [] for _ in range(len(nums)+1) ]
+    # bucket = [ [] for _ in range(len(nums)+1) ] #  
+    
+    # why +1 in lengths of array 
+    # This ensures that even if there are elements that appear the maximum number of times 
+    # (which is the length of the array, 6 in this case), you can still bucket them correctly.
+    
     # # why list of empty bucket we can use simpl array also right but not what if the freq of 2 element are same then 
     # # they are also the k frequent this can be issue so lets say 3 and 4 both freq is 5 so it will store under same array
     
