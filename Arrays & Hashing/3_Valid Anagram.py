@@ -28,9 +28,15 @@ def isAnagram(s: str, t: str):
     #     s_hash_map[ch] = s_hash_map.get(ch,0)+1
     
     # for ch in t:
-    #     s_hash_map[ch] = s_hash_map.get(ch,0)-1  
+    #     if ch not in s_hash_map or s_hash_map[ch] == 0:
+    #         return False
+    #     s_hash_map[ch]-=1
+    # return True    
+          
+    
+    #     s_hash_map[ch] = s_hash_map.get(ch,0)-1  bakwass
         
-    # for key in s_hash_map:
+    # for key in s_hash_map: no need for this be done in above loop also no need to create extra hashmap
     #     if s_hash_map[key]>0:
     #         return False
     

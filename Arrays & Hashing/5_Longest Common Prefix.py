@@ -27,7 +27,7 @@ def longestCommonPrefix(strs):
     
     return prefix        
 
-    #another way        ---------------- 0(n*m) Sc-0(1)
+    #another way        ---------------- 0(n*m2) Sc-0(1) but includes extra concatenation so space issue 
     
     # first = strs[0]
     # ans = ""

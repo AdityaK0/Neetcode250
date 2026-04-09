@@ -1,5 +1,5 @@
 def getConcatenation(nums):
-    # return nums+nums
+    # return nums+nums this doesnt uses extra space 
     new_array = []
     for num in nums:
         new_array.append(num)
