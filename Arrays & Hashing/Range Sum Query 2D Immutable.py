@@ -1,3 +1,5 @@
+
+from sys import prefix
 from typing import List
 
 
@@ -5,16 +7,78 @@ class NumMatrix:
     
     def __init__(self, matrix: List[List[int]]):
         self.matrix = matrix
+        rows = len(matrix)
+        cols = len(matrix[0])
+        self.prefixMat = [[ 0 for c in range(cols+1) ] for r in range(rows+1)]
+        
+        
+        for r in range(rows):
+            for c in range(cols):
+                self.prefixMat[r+1][c+1] = self.prefixMat[r+1][c]+self.prefixMat[r][c+1]+self.matrix[r][c] - self.prefixMat[r][c]
+                
+        
+        
+        
+        # upper row calculation
+        # self.prefixMat[0][0] =  self.matrix[0][0]
+        # for c in range(1,cols):
+        #     self.prefixMat[0][c] = self.prefixMat[0][c-1]+self.matrix[0][c]
+        
+        # # # left column calculation
+        
+        # for r in range(1,rows):
+        #     self.prefixMat[r][0] = self.prefixMat[r-1][0]+self.matrix[r][0]
+        
+        # # # fill matrixes 
+        
+        # for r in range(1,rows):
+        #     for c in range(1,cols):
+        #         above = self.prefixMat[r-1][c]
+        #         left = self.prefixMat[r][c-1]
+        #         topleft  = self.prefixMat[r-1][c-1]
+        #         self.prefixMat[r][c] = self.matrix[r][c]+above+left - topleft
+                
+        # current rowise current_col-left 
+        # upper_part = current_row-1 went to upper part 
+        # that row[current_place_where need ] to store the value 
+        
         
 
     def sumRegion(self, row1, col1, row2, col2):
+        for mats in self.prefixMat:
+            print(mats,"\n")
         
-        grid_sum = 0 # normal flow to calculate the rectangle
-        for r in range(row1,row2+1):
-            for c in range(col1,col2+1):
-                grid_sum+=self.matrix[r][c]
+        row1+=1
+        row2+=1
+        col1+=1
+        col2+=1
+        breakpoint()
+        return (self.prefixMat[row2][col2] - self.prefixMat[row2][col1-1] - self.prefixMat[row1-1][col2] + self.prefixMat[row1-1][col1-1])
+            
+        # full_area = self.prefixMat[row2][col2]
+        
+        # if row1>0:
+        #    top_part = self.prefixMat[row1-1][col2]
+        #    full_area-=top_part
+        # if col1>0:
+        #    left_part = self.prefixMat[row2][col1-1]
+        #    full_area-=left_part
+        
+        # if row1>0 and col1>0:
+        #    topLeft = self.prefixMat[row1-1][col1-1] # as we removed this twice so need add back once
+        #    full_area+=topLeft
+           
+        
+        # return full_area
+        
+        
+        
+        # grid_sum = 0 # normal flow to calculate the rectangle
+        # for r in range(row1,row2+1):
+        #     for c in range(col1,col2+1):
+        #         grid_sum+=self.matrix[r][c]
 
-        return grid_sum  
+        # return grid_sum  
         
         
         

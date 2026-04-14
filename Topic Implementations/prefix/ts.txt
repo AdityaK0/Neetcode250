@@ -1,1 +1,22 @@
 array sum is always equals to suffix[i]+prefix[i]+ans[i]
+
+
+prefix[R] - prefix[L-1] = range sub count 
+
+
+
+https://leetcode.com/problems/contiguous-array/description/
+https://leetcode.com/problems/subarray-sum-equals-k/description/
+https://leetcode.com/problems/subarrays-with-k-different-integers/description/
+https://leetcode.com/problems/count-number-of-nice-subarrays/description/
+https://leetcode.com/problems/binary-subarrays-with-sum/description/
+https://leetcode.com/problems/subarray-product-less-than-k/description/
+https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/
+https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/
+
+
+
+
+
+
+https://leetcode.com/problems/find-all-anagrams-in-a-string/solutions/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem/
