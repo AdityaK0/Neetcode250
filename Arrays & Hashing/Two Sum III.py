@@ -26,7 +26,7 @@ def threeSome(nums):
                 while j<k and nums[j]==nums[j-1]:
                     j+=1
                 
-                while j>k and nums[k]==nums[k-1]:
+                while j<k and nums[k]==nums[k+1]:
                     k-=1  
     
     return result                                         
@@ -54,3 +54,4 @@ def threeSome(nums):
 
 
 print(threeSome([-1,0,1,2,-1,-4]))
+print(threeSome([-2,0,1,1,2]))

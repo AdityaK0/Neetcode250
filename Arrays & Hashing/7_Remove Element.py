@@ -2,7 +2,7 @@
 def removeElement(nums,val):
     # Fast & Slow Pointer (Filtering)
 
-    # using normal loop but in this it does not shit val on the last side 
+    # using normal loop but in this it does not shift val on the last side 
     k = 0
     for i in range(len(nums)):
         if nums[i]!=val:
